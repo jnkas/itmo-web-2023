@@ -1,0 +1,44 @@
+.basicdiv {
+    width: 800px;
+    height: 288px;
+    display: flex;
+}
+
+.buttongroup1 {
+    display: flex; 
+    flex-direction: column;
+    /* margin-right: 31px; */
+}
+
+.buttongroup2 {
+    display: flex; 
+    flex-direction: column;
+    margin-right: 31px;
+}
+
+
+.height1 { height: 26px;
+}
+
+/* body {font-family: Inter;
+}
+
+.main {
+    color: red;
+}
+
+.menu {
+    font-size: 25px;
+}
+
+a {
+    font-size: 25px;
+}
+
+div ul {
+    font-size: 25px;
+}
+
+ul + li {
+    font-size: 25px;
+} */
