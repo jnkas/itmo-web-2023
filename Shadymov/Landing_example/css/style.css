@@ -1,17 +1,16 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: Inter;
-}
-
-* {
-  box-sizing: border-box;
 }
 
 .container {
   width: 1280px;
   margin: 0 auto;
   padding: 0px 32px;
-  display: flex;
 }
 
 .header .container {
@@ -26,31 +25,22 @@ body {
 .header .logo {
   display: flex;
   margin: 6px 0;
+  align-items: center;
 }
 
 .header .logo_img {
   width: 32px;
 }
 
-.header .menu {
-  display: flex;
-}
-
-.header-nav {
-  display: flex;
-  gap: 12px;
-  align-items: center;
+.header .logo_title {
+  margin-left: 10px;
+  font-size: 18px;
+  padding: 6px 0;
 }
 
 .header-content {
   display: flex;
   margin: 18px 0;
-}
-
-.header .logo_title {
-  margin-left: 10px;
-  align-items: center;
-  padding: 6px 0;
 }
 
 .header .menu {
@@ -62,125 +52,108 @@ body {
 }
 
 .header .menu div {
-  display: flex;
-  color: #667085;
-  font-family: Inter;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
+  color: #667085;
+  display: flex;
   align-items: center;
 }
 
-.header .menu div img {
+.header .menu div.leveled::after {
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: url("../images/chevron_down.svg");
   margin-left: 8px;
 }
 
-.header-nav .button {
+.header-nav {
   display: flex;
-  border-radius: 8px;
-  padding: 10px 18px;
-  color: #667085;
-  align-items: center;
+  margin: 18px 0;
 }
 
-.header-nav .button_primary {
-  border-radius: 8px;
-  border: 1px solid #7f56d9;
-  background: #7f56d9;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+.button {
+  color: #667085;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
   display: flex;
   padding: 10px 18px;
   justify-content: center;
   align-items: center;
+  border-radius: 8px;
+}
+
+.button-primary {
+  border: 1px solid #7f56d9;
+  background: #7f56d9;
+  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
   color: #fff;
-  font-family: Inter;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
 }
 
 /* section-1 */
 
 .pricing-plans {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   background: #f9f5ff;
   padding: 96px 0;
+  text-align: center;
 }
 
 .label {
   display: inline-block;
-  align-self: center;
   padding: 4px 12px;
   border-radius: 16px;
   background: #f4ebff;
   color: #6941c6;
-  text-align: center;
   font-size: 14px;
-  font-style: normal;
-  font-weight: 500;
   line-height: 20px;
 }
 
-.supporting-text {
-  display: flex;
-  color: #6941c6;
-  text-align: center;
-  font-family: Inter;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px;
-  margin-bottom: 40px;
-}
-
-.pricing-plans .container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.heading-badge {
-  display: flex;
-  flex-direction: column;
-}
-
-.heading-badge h1 {
-  display: flex;
-  align-items: center;
+.pricing-plans h1 {
   color: #42307d;
-  text-align: center;
-  font-family: Inter;
   font-size: 48px;
-  font-style: normal;
-  font-weight: 600;
   line-height: 60px;
   letter-spacing: -0.96px;
+  margin-top: 16px;
+  margin-bottom: 24px;
+}
+
+.supporting-text {
+  color: #6941c6;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 30px;
 }
 
 .annual-pricing {
-  display: flex;
+  margin-top: 40px;
+  color: #42307d;
+  font-weight: 500;
+  line-height: 24px;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
 }
 
 .annual-pricing span {
   color: #6941c6;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
 }
 
-/* Cards */
+/* tariffs */
+
+.tariffs {
+  margin-bottom: 96px;
+}
+
+.tariffs .container {
+  display: flex;
+  justify-content: space-between;
+}
 
 .pricing-card {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
+  width: 384px;
   border-radius: 16px;
   border: 1px solid #eaecf0;
   background: #fff;
@@ -188,111 +161,107 @@ body {
     0px 12px 16px -4px rgba(16, 24, 40, 0.08);
 }
 
-.pricing-card .header {
-  background: #ffffff;
-  display: flex;
-  padding: 32px 32px 0px 32px;
-  flex-direction: column;
-  align-items: center;
-  gap: 24px;
-  align-self: stretch;
-}
-
-.pricing-card .header_and_prices {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-}
-
-.header_and_prices .header_and_icon {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 20px;
-  align-self: stretch;
-  color: #6941c6;
+.pricing-card_content {
+  padding: 32px;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.pricing-card_content > img {
+  width: 40px;
+}
+
+.pricing-card_content h3 {
+  color: #6941c6;
   font-size: 20px;
-  font-style: normal;
   font-weight: 600;
   line-height: 30px;
+  margin: 20px 0 0 0;
 }
 
-.header_and_prices h1 {
+.pricing-card_content h1 {
   color: #101828;
-  text-align: center;
   font-size: 48px;
-  font-style: normal;
   font-weight: 600;
   line-height: 60px;
   letter-spacing: -0.96px;
+  margin: 8px 0;
 }
 
-.header_and_prices .supporting-text {
+.pricing-card_content .supporting-text {
   color: #667085;
-  text-align: center;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
 
-.pricing-card .check_items {
+.pricing-card_content .icon {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 16px;
-  padding: 32px;
+  justify-content: center;
+  align-self: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 28px;
+  border: 6px solid #f9f5ff;
+  background: #f4ebff;
 }
 
 .pricing-card ul {
-  list-style: none;
-  padding: 32px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  padding: 0;
+  margin-top: 32px;
+  margin-bottom: 0;
 }
 
 .pricing-card li {
+  list-style: none;
+  color: #667085;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   display: flex;
   align-items: center;
   gap: 12px;
-  color: #667085;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+  margin-bottom: 16px;
+}
+
+.pricing-card li::before {
+  content: "";
+  background: url("../images/check.svg");
+  width: 24px;
+  height: 24px;
+}
+
+.pricing-card li:last-child {
+  margin: 0;
 }
 
 .pricing-card_footer {
-  display: flex;
   padding: 32px;
-  align-items: flex-start;
-  gap: 24px;
   background: #f9fafb;
-  align-self: stretch;
+  border-bottom-left-radius: 16px;
+  border-bottom-right-radius: 16px;
 }
 
-.pricing-card_footer .button {
-  display: flex;
-  flex-direction: column;
-}
+/* toggle */
 
-.pricing-card_footer .button_primary {
-  display: flex;
-  padding: 12px 20px;
-  align-items: center;
-  gap: 8px;
-  border-radius: 8px;
-  border: 1px solid #7f56d9;
+.toggle {
+  border-radius: 12px;
   background: #7f56d9;
-  box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
-  color: #fff;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  align-self: stretch;
-  flex: 1 0 0;
+  width: 44px;
+  height: 24px;
+}
+
+.toggle:hover div {
+  margin-left: 2px;
+}
+
+.toggle div {
+  background: #fff;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  margin-top: 2px;
+  margin-left: 22px;
+  transition: margin 0.5s ease;
 }
