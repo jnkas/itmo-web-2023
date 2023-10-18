@@ -218,56 +218,125 @@ h3{
     justify-content: space-around;   
 }
 
+.time{
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+.time span{
+    width: 16px;
+    height: 9px;
+    color: #8E8E93;
+    font-size: 7px;
+    font-weight: 400;
+    line-height: 8.011px; 
+}
+
 .message-tBot-1{
     background-color: #F5F7F8;
     width: 265px;
     height: 83px;
-    padding: 5px 25px 20px 10px;
+    padding: 5px 0px 20px 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: -90px;
+    left: 111px;
+}
+
+.message-tBot-1>time{
+    bottom: -69px;
 }
 .message-tBot-2{
     background-color: #F5F7F8;
     width: 266px;
     height: 39px;
+    padding: 5px 0px 5px 10px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: -53px;
+    left: 112px;
 }
 .message-tBot-3{
     background-color: #F5F7F8;
     width: 273px;
     height: 28px;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0px 6px 12px;
+    position: relative;
+    bottom: -12px;
+    left: 106px;
+
 }
 .message-tBot-4{
     background-color: #F5F7F8;
     width: 266px;
     height: 83px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px 6px 10px;
+    position: relative;
+    bottom: 28px;
+    right: -110px;
 }
 
 .message-client-1{
     background-color: #EFFCDE;
     width: 339px;
     height: 34px;
-    padding: 8px 39px 9px 12px;
+    padding: 8px 0px 9px 12px;
+    display: flex;
+    justify-content: space-between;
     position: relative;
+    bottom: -108px;
+    left: 2px;
 
 }
 .message-client-2{
     background-color: #EFFCDE;
     width: 298px;
     height: 34px;
-    padding: 6px 33px 6px 12px;
+    padding: 6px 0px 6px 12px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    bottom: -72px;
+    left: 49px;
 }
 .message-client-3{
     background-color: #EFFCDE;
     width: 291px;
     height: 34px;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0px 8px 11px;
+    position: relative;
+    bottom: -33px;
+    left: 35px;
 }
 .message-client-4{
     background-color: #EFFCDE;
     width: 207px;
     height: 34px;
+    display: flex;
+    justify-content: space-between;
+    padding: 6px 0px 6px 12px;
+    position: relative;
+    bottom: 8px;
+    left: 61px;
 }
 .message-client-5{
     background-color: #EFFCDE;
     width: 256px;
     height: 32px;
+    display: flex;
+    justify-content: space-between;
+    padding: 5px 0px 5px 11px;
+    position: relative;
+    bottom: 47px;
+    left: 110px;
 }
 
 .inform-image>div p{
@@ -278,17 +347,7 @@ h3{
     align-items: center;
 }
 
-.time{
-    /* position: relative;
-    right: end;
-    bottom: end; */
-    width: 16px;
-    height: 9px;
-    color: #8E8E93;
-    font-size: 7px;
-    font-weight: 400;
-    line-height: 8.011px; 
-}
-/* 2 client message */
+
+
 
 
