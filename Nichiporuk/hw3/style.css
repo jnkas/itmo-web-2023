@@ -1,0 +1,36 @@
+p:first-child {
+    font-size: 20px;
+}
+
+p:nth-child(2) {
+    color: red;
+}
+
+p:last-child {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+h1 {
+    color: green;
+}
+
+li:last-child {
+    text-decoration: underline;
+}
+
+li:first-child {
+    font-size: 19px;
+    text-decoration: underline;
+}
+
+li:nth-child(2) {
+    font-size: 19px;
+    text-decoration: underline;
+}
+
+li:nth-child(3) {
+    font-size: 19px;
+    text-decoration: underline;
+    color: red;
+}
