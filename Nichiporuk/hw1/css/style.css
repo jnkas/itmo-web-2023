@@ -1,0 +1,31 @@
+.blocks { 
+    border: 2px solid green;
+}
+.center { 
+    text-align: center;
+}
+.block_1 {
+    width: 300px;
+}
+.block_2 {
+    width: 1000px
+}
+.header_color{
+    color: #7e56d9;
+}
+button {
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+}
+#open {
+    color: white;
+    background: #7e56d9;
+    border-color: #7e56d9;
+}
+img {
+    width:150px
+}
+.footer {
+    margin-left: 30px;
+}
