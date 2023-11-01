@@ -10,6 +10,13 @@
     
     }
 
+.container {
+      width: 1216px;
+      margin: auto;
+      margin-bottom: 96px;
+
+}
+
 .header {
     display: flex;
     padding: 96px 0px;
@@ -41,31 +48,35 @@
 /* section 1 */
 
 .header .content h1 {
-    color:#7F56D9;
-    text-align: center;
-    /* Text md/Semibold */
-    font-family: Inter;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px; /* 150% */
+      color: #7F56D9;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 12px;
+      text-align: center;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
 } 
 
 .header .content h6 {
-    margin-bottom: 24px;
-    color: #101828;
-    text-align: center;
-    font-family: Inter;
-    font-size: 48px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 60px; /* 125% */
-    letter-spacing: -0.96px;
-} 
+      margin-bottom: 24px;
+      color: #101828;
+      margin-left: auto;
+      margin-right: auto;
+      font-family: Inter;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 60px;
+      letter-spacing: -0.96px;
+  }
 
 .description {
     height: auto;
     width: 768px;
+    margin: 0 auto;
     color: #667085;
     font-size: 20px;
     font-weight: 400;
@@ -140,7 +151,7 @@ input {
     padding: 0px 32px;
     flex-direction: column;
     align-items: flex-start;
-    gap: 32px;
+    /* gap: 32px; */
 }
 
 .container .heading {
@@ -173,7 +184,7 @@ section.recent-posts {
     width: 1280px;
     height: 496px;
     padding: 0 32px;
-    /* margin-bottom: 96px; */
+    margin-bottom: 64px;
 }
   
 .recent-posts .container h4 {
@@ -181,7 +192,7 @@ section.recent-posts {
     font-size: 24px;
     font-weight: 600;
     line-height: 32px;
-    /* margin-bottom: 32px; */
+    margin-bottom: 32px;
 }
 
 .recent-posts .container h4 + div {
@@ -334,20 +345,19 @@ img.point{
 .main .title {
       color: #101828;
       width: 1216px;
-      margin-left: 32px;
+      margin-top: 96px;
       margin-bottom: 32px;
       font-size: 24px;
       font-weight: 600;
       line-height: 32px;
 }
 
-.main .container {
+.main .container > div:last-child {
       width: 1216px;
       display: grid;
       grid-template-columns: 384px 384px 384px;
       grid-template-rows: 444px 444px;
       grid-gap: 48px 32px;
-      margin-right: 60px;
 }
   
 .main .container .card {
@@ -492,15 +502,14 @@ img.point{
 
 /* navigation */
 
-.navigation {
+.navigation .container {
       display: flex;
       height: 61px;
+      margin-top: 181px;
       padding-top: 20px;
       justify-content: space-between;
       align-items: center;
       align-self: stretch;
-      margin-left: 40px;
-      margin-right: 40px;
 
 }
     
@@ -542,4 +551,5 @@ section.navigation > div {
       align-items: center;
       flex-shrink: 0;
 }
+
 
