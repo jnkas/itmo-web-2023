@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.container {
+    width: 1280px;
+    /* outline: 1px solid red; */
+    margin: 0 auto;
+    padding: 0 32px;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header {
+    background-color: #f9f5ff;
+}
+
+.header .logo {
+    display: flex;
+    margin: 6px 0;
+    align-items: center;
+}
+
+.header .logo__img {
+    width: 32px;
+}
+
+.header .logo__title {
+    margin-left: 10px;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.header-content {
+    display: flex;
+    margin: 18px 0;
+    /* margin-top: 18px;
+    margin-bottom: 18px; */
+    /* outline: 1px solid red; */
+}
+
+.header .menu div:nth-child(2)::after, .header .menu div:nth-child(3)::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    background: url("../images/chevron.svg");
+    margin-left: 8px;
+}
+
+.header .menu {
+    display: flex;
+    margin: 6px 0;
+    align-items: center;
+    margin-left: 40px;
+    gap: 32px;
+}
+
+.header .menu div {
+    color: #667085;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.header .menu div img {
+    margin-left: 8px;
+}
+
+.header-nav {
+    display: flex;
+    margin: 18px 0;
+}
+
+.button {
+    color: #667085;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    display: flex;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.button-primary {
+    color: #fff ;
+    border-radius: 8px;
+    border: 1px solid #7F56D9;
+    background: #7F56D9;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+}
+
+/* section-1 */
+
+.pricing-plans {
+    background-color: #F9F5FF;
+    padding: 96px 0;
+    text-align: center;
+}
+
+.label {
+    display: inline-block;
+    background-color: #F4EBFF;
+    padding: 4px 12px;
+    border-radius: 16px;
+    color: #6941C6;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.pricing-plans h1 {
+    color: #42307D;
+    font-size: 48px;
+    line-height: 60px;
+    letter-spacing: -0.96px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+}
+
+.supporting-text {
+    color: #6941C6;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+}
+.annual-pricing {
+    margin-top: 40px;
+    color: #42307D;
+    font-weight: 500;
+    line-height: 24px;
+    display: inline-flex;
+    align-items: center;
+}
+
+.annual-pricing span {
+    color: #6941C6;
+}
+
+.annual-pricing img {
+    margin-right: 12px;
+}
+
+/* tariffs */
+
+.tariffs {
+    margin-bottom: 96px;
+}
+
+.tariffs .container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pricing-card {
+
+    /* временно */
+    width: 384px;
+
+    border-radius: 16px;
+    border: 1px solid #EAECF0;
+    background: #FFF;
+    box-shadow: 0px 4px 6px -2px rgba(16, 24, 40, 0.03), 0px 12px 16px -4px rgba(16, 24, 40, 0.08);
+    /* padding: 32px; */
+    overflow: hidden;
+
+}
+
+.pricing-card__content {
+    padding: 32px;
+    text-align: center;
+}
+
+.pricing-card__content>img {
+    width: 40px;
+}
+
+.pricing-card__content h3 {
+    color: #6941C6;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 30px;
+    margin: 20px 0 0 0;
+}
+
+.pricing-card__content h1 {
+    color: #101828;
+    font-size: 48px;
+    font-weight: 600;
+    line-height: 60px;
+    letter-spacing: -0.96px;
+    margin: 8px 0;
+}
+
+.pricing-card__content .supporting-text {
+    color: #667085;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+}
+
+.pricing-card ul {
+    padding: 0;
+    margin-top: 32px;
+    margin-bottom: 0;
+}
+
+.pricing-card li::before {
+    content: "";
+    width: 24px;
+    height: 24px;
+    background: url("../images/check.svg");
+}
+
+.pricing-card li {
+    display: flex;
+    list-style: none;
+    color: #667085;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px; /* 150% */
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.pricing-card li:last-child {
+    margin-bottom: 0;
+}
+
+.pricing-cars__footer {
+    padding: 32px;
+    background-color: #F9FAFB;
+    /* border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px; */
+}
