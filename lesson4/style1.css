@@ -1,0 +1,19 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0px;
+}
+
+p {
+    font-size: 26px;
+}
+
+/* 
+
+body { 
+    font-family: 'Inter';
+} 
+
+*/

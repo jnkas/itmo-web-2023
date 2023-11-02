@@ -1,0 +1,182 @@
+
+* {
+    box-sizing: border-box;
+
+}
+
+body {
+    margin: 0;
+    font-family: Inter;
+}
+
+.container {
+    width: 1280px; 
+    margin: 0 auto;
+    padding: 0px 32px;
+    /* outline: 1px solid red; */
+
+}
+
+.hidden {
+    display: none;
+}
+ 
+
+/* buttons */
+
+.button {
+    color: #667085;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 24px;
+    display: flex;
+    padding: 10px 18px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+}
+
+.button-primary {
+    border: 1px solid #7F56D9;
+    background: #7F56D9;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: #fff;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.button-primary:hover {
+    background: #6941C6;
+    border: 1px solid #6941C6;
+ 
+}
+
+.button-primary:active {
+  background: #7F56D9;
+  border: 1px solid #7F56D9;
+  box-shadow: 0px 0px 0px 4px rgba(16, 24, 40, 0.05);
+
+}
+
+.button-primary.disabled {
+    background: #E9D7FE;
+    border: 1px solid #E9D7FE;
+    cursor: not-allowed;
+  
+}
+
+/* modals */
+
+.fade {
+    position: fixed;
+    background: black;
+    /* error height: 100vw; */
+    width: 100vw; 
+    height: 100vh; 
+    top: 0;
+    background: rgba(0,0,0,0.40);
+    backdrop-filter: blur(8px);
+
+}
+
+    /* top: 0; */
+    /* right: 0; */
+    /* left: 0; */
+    /* bottom: 0; */
+
+
+.modal {
+    margin: 0 auto;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+
+    width: 480px;
+    min-height: 630px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #FFF;
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+}
+
+/* form */
+
+.form-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.form-row .input:first-child {
+    flex-grow: 1; 
+}
+
+.form-row .input:last-child {
+    width: 112px;
+}
+ 
+/* input */
+
+.input label {
+    
+    color: #344054;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    margin-bottom: 6px;
+    line-height: 20px; /* 142.857% */
+    display: block;
+
+}
+
+.input input {
+
+    display: block;
+    width: 100%;
+
+    padding: 10px 14px; 
+    border-radius: 8px;
+    border: 1px solid #D0D5DD;
+    background: #FFF;
+    /* Shadow/xs */
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05); 
+    
+    color: #101828;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    outline: none;
+
+    display: block;
+    width: 100%;
+
+}
+
+.input input::placeholder {
+    color: #101828; 
+}
+ 
+.input .hint {
+    margin-top: 6px;
+    color: #667085;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+
+}
+
+
+
+
+
+
+
+ 
+
+
+
+
+
+

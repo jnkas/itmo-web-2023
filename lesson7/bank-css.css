@@ -1,0 +1,52 @@
+/* modals */
+
+.fade {
+  position: fixed;
+    background: black;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.40);
+    backdrop-filter: blur(8px);
+}
+
+.modal {
+    margin: 0 auto;
+    margin-top: 50vh;
+    transform: translateY(-50%);
+
+    width: 480px;
+    padding: 24px;
+    border-radius: 12px;
+    background: #FFF;
+    min-height: 630px;
+
+    /* Shadow/xl */
+    box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
+}
+
+
+/* section.card */
+
+section.card {
+    background: url(images/card-bg.jpeg) no-repeat;
+    /* background-size: cover; */
+    background-size: 100% 100%;
+    border-radius: 8px;
+    height: 254px;
+    padding: 32px 58px;
+    color: #fff;
+}
+
+.bank-card {
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid #FFF;
+
+    background: linear-gradient(113deg, rgba(255, 255, 255, 0.51) 3.51%, rgba(255, 255, 255, 0.00) 111.71%);
+
+    box-shadow: 8px 10px 16px 0px rgba(0, 0, 0, 0.05);
+    backdrop-filter: blur(6px);
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100;400;700&display=swap"
+      rel="stylesheet" />
+    <style>
+      .checkbox {
+        display: inline-flex;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .checkbox label {
+        display: inline-flex;
+
+        font-size: 16px;
+        align-items: center;
+        gap: 12px;
+        font-weight: 500;
+        line-height: 24px;
+
+      }
+
+      .checkbox input {
+        width: 20px;
+        height: 20px;
+        border-radius: 6px;
+        border: 1px solid #d0d5DD;
+        background: #fff;
+      }
+
+      .checkbox input:checked {
+        background: #fff;
+        appearance: none;
+        background: url(check.svg);
+        background-repeat: no-repeat;
+        background-position: center;
+        border: 1px solid #7F56D9;
+
+    }
+      .checkbox label {
+        display: inline-flex;
+        font-size: 16px;
+        align-items: center;
+        gap: 12px;
+      }
+
+      .checkbox-type2 input:checked+label::before {
+        background: red;
+       
+      }
+    
+
+    </style>
+  </head>
+  <body>
+    <div class="checkbox">
+      <input type="checkbox" id="ch-1" checked />
+      <label for="ch-1">Remember me</label>
+    </div>
+    <div class="checkbox">
+      <input type="checkbox" id="ch-2" checked />
+      <label for="ch-2">Remember me</label>
+    </div>
+    <div class="checkbox checkbox-type2">
+      <input type="checkbox" id="ch-3" checked />
+      <label for="ch-3">Remember me</label>
+    </div>
+  </body>
+</html>

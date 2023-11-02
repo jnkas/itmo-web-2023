@@ -13,7 +13,6 @@
   .container {
         width: 1216px;
         margin: auto;
-        margin-bottom: 96px;
   
   }
   
@@ -507,6 +506,7 @@
         height: 61px;
         margin-top: 181px;
         padding-top: 20px;
+        padding-bottom: 96px;
         justify-content: space-between;
         align-items: center;
         align-self: stretch;
