@@ -1,0 +1,38 @@
+@media (max-width:1280px) {
+    .container {
+        width: 100%;
+    }
+
+    .tariffs .container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 16px;
+        align-items: center;
+    }
+
+    .pricing-card {
+        width: 100%;
+        max-width: 440px;
+    }
+    .pricing-card__content {
+        padding: 24px;
+    }
+
+    .pricing-card__footer {
+        padding: 24px;
+    }
+}
+
+@media (max-width:475px) {
+    .pricing-card {
+        width: 100%;
+        max-width: 343px;
+    }
+}
+
+/* @media (min-width:390px) and (max-width:475px) {
+    .pricing-card {
+        width: 100%;
+        max-width: 343px;
+    }
+} */
