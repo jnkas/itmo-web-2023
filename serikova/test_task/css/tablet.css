@@ -41,7 +41,7 @@ section.first {
 .header_container .menu_itm.forTablet div:first-child {
   background-color: #ebd3f8;
 }
-.menu_itm.forMobile{
+.menu_itm.forMobile {
   width: 30px;
   display: none;
 }
@@ -252,7 +252,6 @@ img.bg {
   display: none;
 }
 
-
 /* reviews */
 section.reviews {
   padding: 0;
@@ -377,9 +376,8 @@ section.footer {
     display: none;
   }
 
-
   /* section feature */
-  section.feature{
+  section.feature {
     padding-left: 23px;
     flex-direction: column;
   }
@@ -391,7 +389,7 @@ section.footer {
   }
 
   /* tarifs */
- 
+
   .container .container__text span {
     line-height: 28px;
     width: 214px;
@@ -401,7 +399,7 @@ section.footer {
   }
 
   /* steps */
-  section.steps{
+  section.steps {
     justify-content: start;
   }
   .steps .container {
@@ -417,7 +415,7 @@ section.footer {
     margin-left: 23px;
     right: 0;
   }
-  
+
   .steps_img {
     margin-left: 23px;
     margin-bottom: 26px;
@@ -425,7 +423,7 @@ section.footer {
   }
   .steps_img img {
     justify-content: start;
-    z-index: 3;
+    z-index: 0;
   }
   img.bg {
     display: none;
@@ -433,11 +431,10 @@ section.footer {
   img.bg.blue {
     display: none;
   }
-  .dots.forMobile{
+  .dots.forMobile {
     display: flex;
     justify-content: center;
     margin-bottom: 26px;
-
   }
 
   /* reviews */
@@ -458,19 +455,19 @@ section.footer {
   .message {
     width: 328px;
   }
-  .message>div:first-child{
-    padding-top:20px;
+  .message > div:first-child {
+    padding-top: 20px;
     font-size: 11px;
     font-weight: 400;
     line-height: 24px;
   }
-  .message>div :first-child h5{
+  .message > div :first-child h5 {
     padding: 0;
   }
-  .message>div :first-child::first-line{
+  .message > div :first-child::first-line {
     font-weight: 800;
   }
-  .reviews .dots{
+  .reviews .dots {
     margin-bottom: 51px;
   }
 
@@ -498,7 +495,7 @@ section.footer {
     width: 151px;
     height: 44px;
   }
-  .text_input .blackButton{
+  .text_input .blackButton {
     width: 123px;
   }
 
@@ -524,5 +521,33 @@ section.footer {
     width: 100%;
     padding-top: 25px;
     padding-left: 23px;
+  }
+  .mobile.modal_form {
+    width: 237px;
+    height: 286px;
+    padding: 16px 16px 0 30px;
+    align-items: start;
+  }
+  .mobile.modal_form img {
+    width: 28px;
+  }
+  .fade .mobile.modal_form .button {
+    width: 170px;
+  }
+  .button.mobile {
+    background-color: #ebd3f8;
+    color: #685ed6;
+  }
+  .mobile.modal_form span {
+    margin-top: 24px;
+    margin-left: 0;
+    color: #1d2530;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+  }
+  .mobile.modal_form span:first-of-type {
+    color: #685ed6;
+    font-weight: 700;
   }
 }
