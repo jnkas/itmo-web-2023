@@ -14,24 +14,13 @@
   <body>
     <div class="container">
       <div class="accordion" id="accordionExample">
-        <div class="accordion-item">
+        <div class="accordion-item" data-index="0">
           <h2 class="accordion-header">
-            <button
-              class="accordion-button"
-              type="button"
-              data-bs-toggle="collapse"
-              data-bs-target="#collapseOne"
-              aria-expanded="true"
-              aria-controls="collapseOne"
-            >
+            <button class="accordion-button" type="button">
               Accordion Item #1
             </button>
           </h2>
-          <div
-            id="collapseOne"
-            class="accordion-collapse collapse show"
-            data-bs-parent="#accordionExample"
-          >
+          <div id="collapseOne" class="accordion-collapse collapse show">
             <div class="accordion-body">
               <strong>This is the first item's accordion body.</strong> It is
               shown by default, until the collapse plugin adds the appropriate
@@ -44,7 +33,7 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item" data-index="1">
           <h2 class="accordion-header">
             <button
               class="accordion-button collapsed"
@@ -74,7 +63,7 @@
             </div>
           </div>
         </div>
-        <div class="accordion-item">
+        <div class="accordion-item" data-index="2">
           <h2 class="accordion-header">
             <button
               class="accordion-button collapsed"
@@ -105,27 +94,65 @@
           </div>
         </div>
       </div>
+
+      <hr class="divider" />
+
+      <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Active</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+        </li>
+      </ul>
     </div>
   </body>
   <script>
-    const arrayOfItems = document.querySelectorAll('.accordion-collapse')
+    const arrayOfItems = document.querySelectorAll('.accordion-item')
     let indexShow = 0
 
     function toggleAccordion(index) {
-        indexShow = index
-        if (arrayOfItems[index].classList.contains('show')) {
-            // скрываем 
-        } else {
-            for(let i=0; i< arrayOfItems.length;i++) {
-                arrayOfItems[i].classList.remove('show')
-            }
-            arrayOfItems[index].classList.add('show')
+      if (!index) return
+      indexShow = index
+      let $accordionItem = arrayOfItems[index]
+      console.dir($accordionItem)
+
+      if ($accordionItem.children[1].classList.contains('show')) {
+        // скрываем
+        $accordionItem.children[1].classList.remove('show')
+        $accordionItem.children[0].children[0].classList.add('collapsed')
+      } else {
+        // скрываем все
+        for (let i = 0; i < arrayOfItems.length; i++) {
+          arrayOfItems[i].children[1].classList.remove('show')
+          arrayOfItems[i].children[0].children[0].classList.add('collapsed')
         }
-        
-
-
+        // показываем новый
+        $accordionItem.children[1].classList.add('show')
+        $accordionItem.children[0].children[0].classList.remove('collapsed')
+      }
     }
+    
+    // for (let i=0; i < arrayOfItems.length; i++ ) {
+        // let item = arrayOfItems[i] 
+      for (let item of arrayOfItems) {
 
+        item.addEventListener('click', (e) => {
+          if (e.target.classList.contains('accordion-button')) {
+            //если попали в заголовок
+            let indexOfElement = item.dataset.index
+            toggleAccordion(indexOfElement)
+          }
 
+          // console.dir(e.target.classList.contains('accordion-button'))
+          // console.dir(e.currentTarget)
+        })
+    }
   </script>
 </html>
