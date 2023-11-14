@@ -1,6 +1,4 @@
-const images = ['img1.jpg', 'img2.jpg', 'img3.jpg']
-
-const createCarousel = (elemId, images, options ) => {
+export function createCarousel (elemId, images, options ) {
     if (!options) {
       options = {
         loop: 1,
@@ -103,8 +101,3 @@ const createCarousel = (elemId, images, options ) => {
     
 }
 
-createCarousel('carousel-1', images, {
-  loop: 0,
-  indicators: 1,
-  controls: 1
-})
