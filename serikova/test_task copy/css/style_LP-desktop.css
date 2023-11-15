@@ -1,5 +1,4 @@
 body > section {
-  width: 100%px;
   margin: 0 auto;
 }
 /* section .first */
@@ -7,15 +6,14 @@ body > section {
 section.first {
   height: 809px;
 }
-.header_container {
-  padding-top: 32px;
-}
+
 .logo {
   margin-top: 15px;
 }
 .menu_buttons {
   display: flex;
   gap: 12px;
+  margin-top: 12px;
 }
 .header_button1 {
   color: #685ed6;
@@ -32,13 +30,13 @@ section.first {
 }
 
 /* section .feature */
-
 section.feature {
-  display: flex;
-  height: 819px;
   background: rgba(242, 247, 255, 0.5);
   backdrop-filter: blur(50px);
-  padding: 70px 265.54px 82.42px 165px;
+}
+.feature .container {
+  display: flex;
+  height: auto;
   gap: 76px;
 }
 .title {
@@ -314,13 +312,10 @@ section.feature {
 /* steps */
 
 section.steps {
-  height: 1080px;
+  height: auto;
   margin-top: 100px;
 }
 .steps .container {
-  width: calc(100% - 165px - 165px);
-  margin: 0 auto;
-
   display: flex;
   flex-direction: column;
 }
@@ -381,17 +376,14 @@ section.steps {
   position: absolute;
 }
 
-#steps__bg {
-  width: 1440px;
-  height: 581px;
-}
-
 .steps div.ilustration {
-  width: 1440px;
   height: 581px;
+  margin-top: 167px;
   background-color: rgba(242, 247, 255, 0.5);
   backdrop-filter: blur(50px);
-  margin-top: 126.42px;
+  
+}
+.steps div.ilustration .container{
   position: relative;
 }
 .steps div.ilustration img {
@@ -399,18 +391,18 @@ section.steps {
 }
 
 #steps__tel1 {
-  left: 166px;
-  top: -151px;
+left: 0;
+top: -148px;
   z-index: 2;
 }
 #steps__tel2 {
-  left: 576px;
-  top: -100px;
+  left: calc(50% - 135px);
+  top: -96px;
   z-index: 2;
 }
 #steps__tel3 {
-  left: 1030px;
-  top: -151px;
+  right: 0;
+top: -148px;
   z-index: 2;
 }
 #blue-1 {
@@ -457,14 +449,15 @@ section.steps {
 /* reviews */
 section.reviews {
   height: 555px;
-  padding: 0 165px;
   background: rgba(242, 247, 255, 0.5);
+}
+section.reviews .container{
   display: flex;
   flex-direction: column;
   align-items: center;
   position: relative;
 }
-.reviews > .title {
+.reviews .container> .title {
   width: 408px;
   height: 64px;
   margin: 17px 0 0;
@@ -472,9 +465,9 @@ section.reviews {
   font-weight: 800;
   line-height: 64px;
 }
-.reviews > img {
+.reviews .container> img {
   position: absolute;
-  right: 143px;
+  right: 0;
 }
 
 .rev-messages {
@@ -550,7 +543,6 @@ section.getEmail {
   height: 468px;
 }
 .getEmail .container {
-  width: 77%;
   height: 288px;
   border-radius: 6px;
   background: #685ed6;
@@ -563,7 +555,7 @@ section.getEmail {
   width: 373px;
   height: 288px;
   position: absolute;
-  left: 316px;
+  right: 0;
   border-top-right-radius: 6px;
   border-bottom-right-radius: 6px;
   background-color: mediumpurple;
@@ -572,7 +564,9 @@ section.getEmail {
   content: "";
   position: absolute;
   top: 0;
-  right: calc(100%-80px);
+  right: 0;
+  border-top-right-radius: 8px;
+  border-bottom-right-radius: 8px;
   border-top: 288px solid mediumpurple;
   border-left: 373px solid #685ed6;
   width: 373px;
@@ -667,6 +661,14 @@ section.footer {
   font-size: 20px;
   font-weight: 500;
   line-height: 30px;
+}
+
+.footer .menu .column a:hover {
+  color: lightblue;
+}
+
+.footer .menu .column a:active {
+  color: #685ed6;
 }
 
 .footer > div:last-child {

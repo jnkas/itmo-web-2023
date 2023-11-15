@@ -1,59 +1,71 @@
-body {
-  width: 768px;
-  height: 491px;
+.container {
+  max-width: 768px;
   margin: 0 auto;
+  padding: 0 30px;
 }
+
 .forMobile {
   display: none;
 }
 /* section first */
 section.first {
-  height: auto;
+  height: 491px;
 }
-.header_container {
-  width: 100%;
-  padding: 33px 32px 0px 43px;
+.first > .container {
+  max-width: 768px;
+}
+.header.container {
+  padding-top: 29px;
+  display: flex;
   justify-content: space-between;
 }
+.header.container .logo {
+  display: flex;
+}
 
-.header_container .logo img {
+.header.container .logo img {
   width: 33px;
   height: 33px;
 }
-.header_container .logo h3 {
+.header.container .logo h3 {
   font-size: 28.111px;
   font-weight: 700;
   line-height: 21.083px;
 }
-.header_container .menu_itm.forTablet {
-  width: 234px;
-  height: 40px;
+.header.container .menu_itm {
+  width: auto;
   display: flex;
-  gap: 11px;
+  gap: 32px;
+  /* margin-right: 32px; */
 }
-.header_container .menu_itm.forTablet div {
-  width: 144px;
+.header.container .menu_itm .button {
+  display: flex;
   padding: 10px 20px;
+  align-items: center;
+  gap: 10px;
+  height: 40px;
+  width: 144px;
+}
+.header.container .menu_itm a {
   font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.header.container .menu_itm a:first-child {
   font-weight: 700;
-  line-height: 20px;
 }
-.header_container .menu_itm.forTablet div:first-child {
+.header.container .menu_itm div:first-child {
   background-color: #ebd3f8;
+  color: #685ed6;
 }
-.menu_itm.forMobile {
+.menu_itm .forMobile {
   width: 30px;
   display: none;
 }
-.main_container {
-  width: 100%;
-  height: auto;
-}
-
-.main_container .information {
+.main.container .information {
   margin: 62px 0px 0px 40px;
 }
-.main_container .information .main__title {
+.main.container .information .main__title {
   font-size: 32px;
   font-weight: 800;
   line-height: 40px;
@@ -61,7 +73,7 @@ section.first {
   height: 80px;
   margin-bottom: 32px;
 }
-.main_container .information .main__title + div {
+.main.container .information .main__title + div {
   width: 270px;
   height: 112px;
   font-size: 18px;
@@ -74,26 +86,31 @@ section.first {
   line-height: 24px;
 }
 
-.main_container img:last-child {
+.main.container img:last-child {
   z-index: 5;
   margin-top: 61px;
 }
-.main_container > img:nth-of-type(1) {
+.main.container > img:nth-of-type(1) {
   top: 250px;
   left: 6px;
   margin: 0;
 }
-.main_container > img:nth-of-type(2) {
+.main.container > img:nth-of-type(2) {
   top: 0;
   left: 311px;
   margin: 0;
   z-index: 1;
 }
-.main_container > img:nth-of-type(3) {
+.main.container > img:nth-of-type(3) {
   top: 150px;
   left: 503px;
   margin: 0;
   z-index: 1;
+}
+.first img:last-child {
+  width: 420px;
+  height: 338px;
+  margin: 0;
 }
 
 /* section feature */
@@ -101,6 +118,10 @@ section.feature {
   height: auto;
   padding: 60px 40px;
   gap: 0;
+}
+section.feature .container {
+  max-width: 768px;
+  position: relative;
 }
 .title {
   margin-top: 0;
@@ -160,12 +181,13 @@ section.feature {
 .feature img:last-child {
   width: 300px;
   height: 487px;
-  position: relative;
+  position: absolute;
+  right: 0;
 }
 
 /* tarifs */
 .tarifs > .container {
-  width: 100%;
+  width: 768px;
   height: auto;
   margin: 54px auto;
   gap: 36px;
@@ -210,7 +232,9 @@ section.steps {
   margin-top: 50px;
 }
 .steps .container {
-  width: calc(100% - 139px - 139px);
+  width: 768px;
+  display: flex;
+  justify-content: center;
 }
 
 .steps .container > .title {
@@ -224,7 +248,7 @@ section.steps {
   display: flex;
   justify-content: space-between;
   position: relative;
-  right: 95px;
+  right: 0;
 }
 .lines > div {
   width: 208px;
@@ -244,12 +268,19 @@ section.steps {
   display: flex;
   gap: 30px;
   margin-bottom: 80px;
+  position: relative;
+  margin-bottom: 110px;
 }
 .steps_img img {
-  z-index: 1;
+  z-index: 5;
 }
-img.bg {
-  display: none;
+.steps_img .bg {
+  width: 100vw;
+  height: 316px;
+  color: lightblue;
+  position: absolute;
+  top: 50%;
+  z-index: 1;
 }
 
 /* reviews */
@@ -343,43 +374,60 @@ section.footer {
   *.forMobile {
     display: block;
   }
-
-  /* section first */
-  .header_container {
-    padding: 33px 23px 0px 26px;
-  }
-  .header_container .menu_itm.forTablet {
+  *.forTablet {
     display: none;
   }
-  .header_container .menu_itm.forMobile {
+
+  /* section first */
+  section.first {
+    height: auto;
+  }
+  .header.container {
+    max-width: 375px;
+    padding: 33px 23px 0px 26px;
+  }
+  .header.container .menu_itm.forTablet {
+    display: none;
+  }
+  .header.container .menu_itm.forMobile {
     display: block;
     margin-top: 15px;
     margin-left: 173px;
   }
-  .main_container {
+  .main.container {
     flex-direction: column;
+    max-width: 375px;
   }
 
-  .main_container img:last-child {
+  .header.container .forMobile {
+    width: 30px;
+  }
+  .main.container img:last-child {
     z-index: 5;
     margin-top: 61px;
   }
-  .main_container > img:nth-of-type(1) {
+  .main.container > img:nth-of-type(1) {
     top: 250px;
     left: 6px;
     margin: 0;
   }
-  .main_container > img:nth-of-type(2) {
+  .main.container > img:nth-of-type(2) {
     display: none;
   }
-  .main_container > img:nth-of-type(3) {
+  .main.container > img:nth-of-type(3) {
     display: none;
   }
 
   /* section feature */
   section.feature {
     padding-left: 23px;
+  }
+  section.feature > div.container {
     flex-direction: column;
+    padding-left: 0;
+  }
+  section.feature > div.container img {
+    position: relative;
   }
   .feature_list {
     width: 331px;
@@ -389,7 +437,10 @@ section.footer {
   }
 
   /* tarifs */
-
+  .tarifs .container {
+    max-width: 375px;
+    padding: 0;
+  }
   .container .container__text span {
     line-height: 28px;
     width: 214px;
@@ -438,20 +489,23 @@ section.footer {
   }
 
   /* reviews */
-  .reviews > .title {
+  .reviews .container {
+    margin: 0 auto;
+    max-width: 375px;
+  }
+  .reviews .container > .title {
     width: 284px;
     margin: 60px auto 0;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 40px;
   }
-  .reviews > img {
+  .reviews .container > img {
     width: 54px;
     top: 5px;
     right: 45px;
   }
 
-  .rev-messages {
-    width: auto;
-    margin: 48px 0 32px 23px;
-  }
   .message {
     width: 328px;
   }
@@ -516,7 +570,12 @@ section.footer {
     flex-direction: column;
     gap: 20px;
   }
-
+  .footer a:hover {
+    color: lightblue;
+  }
+  .footer a:active {
+    color: #685ed6;
+  }
   .footer > div:last-child {
     width: 100%;
     padding-top: 25px;
