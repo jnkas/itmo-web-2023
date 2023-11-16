@@ -260,3 +260,16 @@ section.card {
     box-shadow: 8px 10px 16px 0px rgba(0, 0, 0, 0.05);
     backdrop-filter: blur(6px);
 }
+
+
+/* avatar */
+
+.avatar {
+    display: flex;
+    width: 40px;
+    height: 40px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 200px;
+}
