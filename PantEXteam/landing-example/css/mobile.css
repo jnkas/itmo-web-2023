@@ -1,21 +1,19 @@
-@media (max-width:1280px) {
+/* Для экранов меньше 1280px разрешением */
+@media screen and (max-width: 1280px){
     .container {
         width: 100%;
+        margin: 0 auto;
+        padding: 0px 32px;
     }
-
     .tariffs .container {
         flex-direction: column;
         gap: 16px;
         padding: 16px;
         align-items: center;
     }
-
     .pricing-card {
         width: 100%;
         max-width: 440px;
-    }
-    .pricing-card__content {
-        padding: 24px;
     }
 
     .pricing-card__footer {
@@ -23,16 +21,19 @@
     }
 }
 
-@media (max-width:475px) {
+@media (max-width: 475px) {
     .pricing-card {
         width: 100%;
         max-width: 343px;
     }
 }
 
-/* @media (min-width:390px) and (max-width:475px) {
+/*Для теста
+@media (min-width: 390px) and (max-width: 475px) {
     .pricing-card {
         width: 100%;
         max-width: 343px;
     }
-} */
+}
+
+*/

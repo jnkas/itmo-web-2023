@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" type="text/css" href="https://semantic-ui.com/dist/semantic.min.css"> -->
+    <!-- <script
+        src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="
+        crossorigin="anonymous"></script>
+        <script src="https://semantic-ui.com/dist/semantic.min.js"></script> -->
+    <style> 
+        body {
+            font-family: Inter;
+        }
+        .checkbox {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .checkbox label {
+            color: #344054;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 24px; 
+        }
+        .checkbox input {
+            width: 20px;
+            height: 20px;
+            border-radius: 6px;
+            border: 1px solid #D0D5DD;
+            background: #fff;
+            appearance: none;
+        }
+
+        .checkbox input:checked {
+            background-color: #F9F5FF;
+            background-image: url(check.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            appearance: none;
+            border: 1px solid #7F56D9;
+        }
+        .checkbox-type2 input:checked+label {
+            display: inline-flex;
+            align-items: center;
+            margin-left: -35px;
+        }
+        .checkbox-type2 input:checked+label:before {
+            background-color: #F9F5FF;
+            background-image: url(check.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            border: 1px solid #7F56D9;
+            border-radius: 6px;
+            content: "";
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            box-sizing: border-box;
+            margin-right: 12px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="checkbox">
+        <input type="checkbox" id="ch-1">
+        <label for="ch-1">Remember me</label>
+    </div>
+    <div class="checkbox">
+        <input type="checkbox"id="ch-2" checked>
+        <label for="ch-2">Remember me</label>
+    </div>
+    <div class="checkbox checkbox-type2">
+        <input type="checkbox"id="ch-3" checked>
+        <label for="ch-3">Remember me</label>
+    </div>
+    <style>
+        select {
+            background: #fff;
+            background-image: url(check.svg);
+
+            padding: 10px 14px;
+            border-radius: 8px;
+            border: 1px solid #D0D5DD;
+            background-repeat: no-repeat;
+            background-position: 10px 12px;
+            padding: 10px 14px;
+            padding-left: 30px;
+            box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+
+            color: #101828;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            outline: none;
+
+            display: block;
+            width: 300px;
+        }
+    </style>
+    <div>
+        <select name="" id="">
+            <option value="">Search</option>
+            <option value="">2</option>
+            <option value="">35</option>
+            <option value="">555</option>
+        </select>
+    </div>
+
+    <form class="ui form">
+        <div class="ui selection dropdown">
+            <input type="hidden" name="gender">
+            <i class="dropdown icon"></i>
+            <div class="default text">Gender</div>
+            <div class="menu">
+              <div class="item" data-value="1">Male</div>
+              <div class="item" data-value="0">Female</div>
+            </div>
+          </div>
+    </form>
+
+    <!-- <script>
+        $('.ui.dropdown').dropdown('show');
+    </script> -->
+    
+</body>
+</html>
