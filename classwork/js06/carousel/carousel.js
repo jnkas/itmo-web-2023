@@ -90,7 +90,7 @@ const createCarousel = (elemId, images, options ) => {
         //     elem.className = 'dot active'
         // }
     
-        elem.className = 'dot ' + (index === currentImg) ? 'active' : ''
+        elem.className = 'dot ' + ((index === currentImg) ? 'active' : '')
       })
     }
 
