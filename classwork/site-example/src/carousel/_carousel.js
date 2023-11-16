@@ -1,3 +1,4 @@
+import './carousel.css'
 export function createCarousel (elemId, images, options ) {
     if (!options) {
       options = {
@@ -39,9 +40,13 @@ export function createCarousel (elemId, images, options ) {
       `
     }) 
 
-    $mainContainer.append($carouselContainer)
-    if(options.controls) $mainContainer.append($controlElements)
-    $mainContainer.append($indicatorElement)
+    let $wrapper = document.createElement('div')
+    $wrapper.className = 'carousel'
+
+    $wrapper.append($carouselContainer)
+    if(options.controls) $wrapper.append($controlElements)
+    $wrapper.append($indicatorElement)
+    $mainContainer.append($wrapper)
     
     let itemWidth = $carouselContainer.offsetWidth
     const $indicatorsContainer = document.querySelector('.carousel-indicators')
