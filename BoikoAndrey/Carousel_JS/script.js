@@ -32,17 +32,26 @@ const createCarousel = (elemId, images) => {
     `
 
     // создаем ДИВ для индикаторов
-    const $containerIndicator = document.createElement('div')
+    const $containerIndicator = document.createElement ('div')
 
     $containerIndicator.className = 'container-indicator'
 
-    $containerIndicator.innerHTML = `
-        <div class="indicator" data-index="0"></div>
-        <div class="indicator" data-index="1"></div>
-        <div class="indicator" data-index="2"></div>
-    `
+    for(let i=0; i<images.length; i++){
+
+        let $indicator = document.createElement ('div')
+
+        $indicator.className = 'indicator'
+
+        $indicator.dataset.index = i
+
+        $containerIndicator.append ($indicator)
+    
+    }
+
     $mainContainer.append($containerCarousel)
+
     $mainContainer.append($containerButtonSlide)
+    
     $mainContainer.append($containerIndicator)
 
     const $buttonSlideCollection = document.querySelectorAll('.button-slide')
