@@ -31,20 +31,21 @@
     </div>
     <script>
         const $divCollection = document.querySelectorAll(".lvl")
-        const handler = (objEvent) => {
+
+        const handler = (e) => {
+
             let cutLvl = (s) => {
                 return s.slice(4)
             }
             console.log(
-                objEvent, 
+
+                e, 
                 'currentTarget: ' + cutLvl(e.currentTarget.className),
                 'target: ' + cutLvl(e.target.className) )
         }
         $divCollection.forEach(
-            (elem) => {
-                elem.addEventListener("mouseover", (e)=> {
-                    handler(e, asdasd)
-                })
+            (elem, i) => {
+                elem.addEventListener("mouseover", handler)
             }
         )
     </script>
