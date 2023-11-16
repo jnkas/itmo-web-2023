@@ -10,7 +10,7 @@ const initTooltip = () => {
     //     box.className = 'box'
     //     //надо как-то получить название лейбла
     //     let labelText = $elem.innerText
-    //     box.innerHTML = `<span>Нажмите для перехода к ${labelText}</span>`
+        box.innerHTML = `<span>Нажмите для перехода к ${labelText}</span>`
     //     box.style.opacity = 1
     //     $elem.append(box)
     // }

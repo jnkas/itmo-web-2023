@@ -7,10 +7,10 @@
     <style>
         .lvl {
             position: absolute;
-            width: 40px;
-            height: 40px;
+            width: 160px;
+            height: 160px;
             background-color: black;
-            margin-top: 40px;
+            margin-top: 160px;
         }
         .green { background-color: green; }
         .tomato { background-color: tomato; }
@@ -31,18 +31,20 @@
     </div>
     <script>
         const $divCollection = document.querySelectorAll(".lvl")
-        const handler = (e) => {
+        const handler = (objEvent) => {
             let cutLvl = (s) => {
                 return s.slice(4)
             }
             console.log(
-                e, 
+                objEvent, 
                 'currentTarget: ' + cutLvl(e.currentTarget.className),
                 'target: ' + cutLvl(e.target.className) )
         }
         $divCollection.forEach(
-            (elem, i) => {
-                elem.addEventListener("mouseover", handler)
+            (elem) => {
+                elem.addEventListener("mouseover", (e)=> {
+                    handler(e, asdasd)
+                })
             }
         )
     </script>
