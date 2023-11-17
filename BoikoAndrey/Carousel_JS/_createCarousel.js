@@ -1,6 +1,4 @@
-const images = ['images/img_1.jpg', 'images/img_2.jpg', 'images/img_3.jpg']
-
-const createCarousel = (elemId, images) => {
+export function createCarousel (elemId, images) {
     // нашли элемент по ID
     const $mainContainer = document.getElementById(elemId)
 
@@ -154,6 +152,3 @@ const createCarousel = (elemId, images) => {
     // вызов функции отслеживания слайда
     indicatorActive(indexIndicator)
 }
-
-
-createCarousel('carousel', images)
