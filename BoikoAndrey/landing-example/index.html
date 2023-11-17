@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing page</title>
+    <link rel="stylesheet" href="css/library.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/mobile.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css -->
+    ">
+</head>
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img class="logo__img" src="images/logo.svg" alt="">
+                    <div class="logo__title">Untitled UI</div>
+                </div>
+                <div class="menu">
+                    <div>Home</div>
+                    <div class="leveled">Products </div>
+                    <div class="leveled">Resources </div>
+                    <div>Pricing</div>
+                </div>
+            </div>
+            <div class="header-nav">
+                <div class="avatar hidden"> <img src="images/avatar.svg" alt=""></div>
+                <div class="button" data-name="log_in">log in</div>
+                <div class="button button-primary" data-name="sing_up">Sign up</div>
+            </div>
+        </div>
+    </div>
+    <section class="pricing-plans">
+        <div class="container">
+            <div class="heading-badge">
+                <div class="label">Pricing plans</div>
+                <h1>Plans for all sizes</h1>
+            </div>
+            <div class="supporting-text">
+                Simple, transparent pricing that grows with you. Try any plan free for 30 days.
+            </div>
+            <div class="annual-pricing">
+                <div class="toggle">
+                    <div></div>
+                </div>
+                &nbsp;Annual pricing <span>(save 20%)</span>
+            </div>
+        </div>
+    </section>
+    <section class="tariffs">
+        <div class="container">
+            <div class="pricing-card">
+                <div class="pricing-card__content">
+                    <img src="images/zap.svg">
+                    <h3>Basic plan</h3>  
+                    <h1>$10/mth</h1>
+                    <div class="supporting-text">Billed annually.</div> 
+                    <ul>
+                        <li> Access to all basic features</li>
+                        <li> Basic reporting and analytics</li>
+                        <li> Up to 10 individual users</li>
+                        <li> 20GB individual data each user</li>
+                        <li> Basic chat and email support</li>
+                    </ul>
+                </div>
+                <div class="pricing-card__footer">
+                    <div class="button button-primary" data-name="start">Get started</div>  
+                    
+                </div>  
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-card__content">
+                    <img src="images/zap.svg">
+                    <h3>Basic plan</h3>  
+                    <h1>$20/mth</h1>
+                    <div class="supporting-text">Billed annually.</div> 
+                    <ul>
+                        <li> 200+ integrations</li>
+                        <li> Advanced reporting and analytics</li>
+                        <li> Up to 20 individual users</li>
+                        <li> 40GB individual data each user</li>
+                        <li> Priority chat and email support</li>
+                    </ul>
+                </div>
+                <div class="pricing-card__footer">
+                    <div class="button button-primary" data-name="start">Get started</div>  
+                </div>  
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-card__content">
+                    <img src="images/zap.svg">
+                    <h3>Basic plan</h3>  
+                    <h1>$20/mth</h1>
+                    <div class="supporting-text">Billed annually.</div> 
+                    <ul>
+                        <li> 200+ integrations</li>
+                        <li> Advanced reporting and analytics</li>
+                        <li> Up to 20 individual users</li>
+                        <li> 40GB individual data each user</li>
+                        <li> Priority chat and email support</li>
+                    </ul>
+                </div>
+                <div class="pricing-card__footer">
+                    <div class="button button-primary" data-name="start">Get started</div>  
+                </div>  
+            </div>
+        </div>
+    </section>
+    <div class="fade hidden" >
+        <div class="modal" >
+            <div class="content payment hidden" id="modal-bank">
+                <section class="card">
+                    <div class="bank-card">
+                        <div>
+                            <div class="title">ntitled.</div>
+                            <div class="pay-pass">
+                                <img src="images/pay-pass.svg" alt="">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="holder">
+                                <div>
+                                    <span>OLIVIA RHYE</span>
+                                    <span>06/24</span>
+                                </div>
+                                <div>1234 1234 1234 1234</div>
+                            </div>
+                            <div>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="19" viewBox="0 0 30 19" fill="none">
+                                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M14.9053 16.4392C13.3266 17.7699 11.2787 18.5732 9.04092 18.5732C4.04776 18.5732 0 14.5736 0 9.63988C0 4.70613 4.04776 0.706543 9.04092 0.706543C11.2787 0.706543 13.3266 1.50987 14.9053 2.8406C16.484 1.50987 18.5319 0.706543 20.7697 0.706543C25.7629 0.706543 29.8106 4.70613 29.8106 9.63988C29.8106 14.5736 25.7629 18.5732 20.7697 18.5732C18.5319 18.5732 16.484 17.7699 14.9053 16.4392Z" fill="white"/>
+                                    <path opacity="0.5" fill-rule="evenodd" clip-rule="evenodd" d="M14.9053 16.4392C16.8492 14.8006 18.0818 12.3625 18.0818 9.63988C18.0818 6.91727 16.8492 4.47913 14.9053 2.84059C16.484 1.50987 18.5319 0.706543 20.7697 0.706543C25.7628 0.706543 29.8106 4.70613 29.8106 9.63988C29.8106 14.5736 25.7628 18.5732 20.7697 18.5732C18.5319 18.5732 16.484 17.7699 14.9053 16.4392Z" fill="white"/>
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.905 16.4391C16.8489 14.8005 18.0815 12.3624 18.0815 9.63983C18.0815 6.91724 16.8489 4.47911 14.905 2.84058C12.9611 4.47911 11.7285 6.91724 11.7285 9.63983C11.7285 12.3624 12.9611 14.8005 14.905 16.4391Z" fill="white"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>  
+                </section>
+                <section class="cardholder-form">
+                    <form action="">
+                        <div class="form-row">
+                            <div class="input">
+                                <label for="">Name on card</label>
+                                <input type="text" placeholder="Olivia Rhye">
+                                <div class="hint">This is a hint text to help user.</div>
+                            </div>
+                            <div class="input">
+                                <label for="">Expiry</label>
+                                <input type="text" placeholder="06 / 2024">
+                                <div class="hint hidden">This is a hint text to help user.</div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="input">
+                                <label for="">Name on card</label>
+                                <input type="text" placeholder="Olivia Rhye">
+                                <div class="hint">This is a hint text to help user.</div>
+                            </div>
+                            <div class="input">
+                                <label for="">CVV</label>
+                                <input type="password" placeholder="">
+                                <div class="hint hidden">This is a hint text to help user.</div>
+                            </div>
+                        </div>
+
+                        <div class=>
+                            <input type="checkbox" checked disabled>
+                            <textarea name="" id="" cols="30" rows="10">123123123123</textarea>
+                            <select name="" id="">
+                                <option value="">1</option>
+                                <option value="">2</option>
+                                <option value="">35</option>
+                                <option value="">555</option>
+                            </select>
+                            <button>hdskfhsd</button>
+                        </div>
+                    </form>
+                </section>
+            </div>
+            <div class="content payment hidden" id="modal-autorisacion">
+                <div>
+                    <div class="logo-autarisacion">
+                        <div>
+                            <div><img src="images/close.svg" alt="Close"></div>   
+                        </div>
+                    </div>
+                    <div class="autorisacion-head">
+                        <div><h3>Please enter your password</h3></div>
+                        <div class="hint">Enter your password to make this change.</div>
+                    </div>
+                    <div class="container-input">
+                        <div class="input">
+                            <label for="email">Email of username</label>
+                            <input id="email" type="email" placeholder="email@gmail.com">
+                            <div class="hint hidden">This is a hint text to help user.</div>
+                        </div>
+                        <div class="input">
+                            <label for="pass">Password</label>
+                            <input id="pass" type="password" placeholder="*********" minlength="8">
+                            <div class="hint hidden">This is a hint text to help user.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-button">
+                   <div class="button" data-name="cancel">Cancel</div>
+                   <div class="button button-primary" data-name="enter"> Log in</div>
+                </div>
+           </div> 
+        </div> 
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
