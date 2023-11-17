@@ -1,0 +1,121 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Manrope;
+  font-style: normal;
+}
+
+.container{
+  max-width: 1110px;
+  margin: 0 auto;
+}
+
+.button {
+  display: flex;
+  border-radius: 6px;
+  justify-content: center;
+  align-items: center;
+  background: #685ed6;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+  color: #fff;
+  padding: 12px 32px;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.fade {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgb(232, 235, 246, 0.95);
+}
+.modal_form {
+  width: 480px;
+  height: 502px;
+  padding: 105px 70px 139px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+  background: #fff;
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.07);
+  opacity: 100%;
+  position: relative;
+}
+.modal_form h1 {
+  margin: 0;
+  margin-bottom: 32px;
+  color: #685ed6;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 32px;
+}
+.modal_form input {
+  width: 340px;
+  height: 40px;
+  margin-bottom: 8px;
+  padding: 16px 20px;
+  border-radius: 4px;
+  background: #f7f7fd;
+  border: 1px solid #f7f7fd;
+}
+.modal_form .blockedToWatch input {
+  width: 286px;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.modal_form .blockedToWatch {
+  display: flex;
+  justify-content: start;
+}
+.modal_form .blockedToWatch::after {
+  content: url(../images/form_eye.svg);
+  display: flex;
+  background: #f7f7fd;
+  border: 1px solid #f7f7fd;
+  width: 54px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  border-top-right-radius: 0px;
+  border-top-left-radius: 0px;
+}
+.modal_form input::placeholder {
+  color: #1d2530;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+}
+.modal_form span {
+  color: #605dec;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  margin-left: 60%;
+}
+.modal_form .button {
+  width: 340px;
+  height: 48px;
+  margin-top: 32px;
+}
+.modal_form .button_close {
+  width: 32px;
+  height: 32px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+}
+
+.hidden {
+  display: none!important;
+}
