@@ -79,11 +79,14 @@ const isLegal = () => {
 }
 
 const getAutorisacion = () => {
+
+    let testEmail = new RegExp('[a-z0-9] + @[a-z] + \.[a-z]{2,3}')
+    if (!testEmail.test(USER.email)) isError()
     
     let emailUs = document.querySelector ('#email').value
     let passwordUs = document.querySelector ('#pass').value
     
-    if (USER.email === emailUs &&  USER.password === passwordUs) {
+    if (USER.email === emailUs &&  USER.password === passwordUs) { 
 
         isLegal()
 
