@@ -45,7 +45,7 @@ export function createCarousel (elemId, images) {
         $containerIndicator.append ($indicator)
     
     }
-
+    // Добавляеи элементы в див
     $mainContainer.append($containerCarousel)
 
     $mainContainer.append($containerButtonSlide)
