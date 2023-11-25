@@ -1,4 +1,13 @@
+import { updateTasklist } from '../tasklist/tasklist'
 import './task.scss'
+
+const removeTask = (id) => {
+    Store.tasks.forEach((element, i) => {
+        if (element.id === id) {
+            Store.tasks.splice(i, 1)
+        }
+    })
+}
 
 export const createTask = (data) => {
   const elem = document.createElement('div')
@@ -15,7 +24,20 @@ export const createTask = (data) => {
     <div class='cell description'>${data.description}</div>
     <div class='cell date_start'>${data.date_start}</div>
     <div class='cell date_finish'>${data.date_finish}</div>
+    <div class='cell controls'>
+        <div class='button remove'>
+            <img src='./trash_icon.svg'>
+        </div>
+    </div>
   `
+
+  elem.querySelector('.controls .remove').addEventListener(
+    'click', () => {
+        removeTask(data.id)
+        updateTasklist()
+    }
+    
+  )
 
   return elem
 }

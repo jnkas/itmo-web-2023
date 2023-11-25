@@ -17,3 +17,10 @@ export const createTasklist = () => {
 
     return elem 
 }
+
+export const updateTasklist = () => {
+
+    document.querySelector('.task-container').innerHTML = ''
+    document.querySelector('.task-container')
+    .append(createTasklist())
+}

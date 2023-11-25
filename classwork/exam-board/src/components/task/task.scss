@@ -1,7 +1,6 @@
 
 .task {
     display: flex;
-    padding: 16px 24px;
     border-bottom: 1px solid #eaecf0;
   
     .cell {
@@ -11,6 +10,14 @@
         display: flex;
         align-items: center;
         flex-shrink: 0;
+    }
+
+    .name {
+        min-width: 380px;
+    }
+
+    .status {
+        min-width: 130px;
     }
   
     input {
@@ -52,7 +59,7 @@
     }
   
     .description {
-      width: 402px;
+      width: auto;
       color: #667085;
       font-size: 14px;
       font-style: normal;
@@ -61,7 +68,7 @@
     }
   
     .date_start {
-      width: 131px;
+      width: 130px;
       color: #667085;
       font-size: 14px;
       font-style: normal;
@@ -70,7 +77,7 @@
     }
   
     .date_finish {
-      width: 137px;
+      width: 130px;
       color: #667085;
       font-size: 14px;
       font-style: normal;

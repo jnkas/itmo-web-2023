@@ -19,13 +19,13 @@ const ICONS = {
 
 export const createButton = (icon, title, type) => {
 
-    icon = icon ? icon : ''
-    title = title ? title : ''  
+    icon = icon !== null ? icon : ''
+    title = title !== null ? title : ''  
 
     const elem = document.createElement('div')
     elem.className = 'button ' + (type || '')
     elem.innerHTML = `
-        <span>${ICONS[icon]}</span>
+        <span>${icon && ICONS[icon]}</span>
         <span>${title}</span>
     `
   

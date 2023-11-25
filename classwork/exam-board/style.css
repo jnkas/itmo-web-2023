@@ -17,3 +17,8 @@ body {
   height: 100vh;
 }
 
+.row {
+  display: flex;
+  gap:16px; 
+}
+
