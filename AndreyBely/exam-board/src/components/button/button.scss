@@ -1,0 +1,38 @@
+.button {
+   padding: 10px 16px;
+   border: 1px solid transparent;
+
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 600;
+   line-height: 20px;
+  
+   display: flex;
+   align-items: center;
+   border-radius: 8px;
+   cursor: pointer;
+ 
+   &.primary {
+      border-color: #7F56D9; 
+      background-color: #7F56D9;
+      color: #fff
+
+   }
+
+   span:empty {
+      display: none;
+
+   }
+
+   .span:first-child {
+      display: flex;
+      align-items: center;
+
+   }
+
+}
+
+// :empty - скрыть элемент, если в нем нет children (icon, title...)
+// .button span:empty
+// .button &:empty = button:empty - & - обозначает текущий элемент (как this в объекте)
+

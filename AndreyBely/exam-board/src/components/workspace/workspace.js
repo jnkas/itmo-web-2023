@@ -1,4 +1,6 @@
 import './workspace.scss'
+import {createButton} from '../button/button'
+import {createTasklist} from '../tasklist/tasklist'
 
 // Функция Конструктор, которая создает и возвращает каждый раз при вызове новый Элемент 
 export const createWorkspace = () => { 
@@ -7,14 +9,24 @@ export const createWorkspace = () => {
        elem.className = 'workspace'
 
        elem.innerHTML = `
-       <header>
-            <div>Plans</div>
-            <div class="action"></div>
-       </header> 
+          <header>
+               <div>Plans</div>
+               <div class="actions"></div>
+          </header>
+          <div class='filter-bar'></div>
+          <div class='task-container'></div> 
        `
 
-       return elem
+       const addTaskButton = createButton('plus', 'Добавить задачу', 'primary')
+
+       elem.querySelector('.actions').append(addTaskButton)
+
+       const TaskList = createTasklist()
+
+       elem.querySelector('.task-container').append(TaskList)
     
+       return elem
+
 }
 
 
