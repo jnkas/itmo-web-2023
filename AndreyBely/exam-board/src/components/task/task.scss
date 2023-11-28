@@ -1,6 +1,86 @@
+.task {
+  display: flex;
+  border-bottom: 1px solid #eaecf0;
 
-.task { 
+  .cell {
+      gap: 12px;
+      padding: 16px 24px;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      flex-shrink: 0;
+  }
+
+  .name {
+      min-width: 380px;
+  }
+
+  .status {
+      min-width: 130px;
+  }
+
+  input {
     display: flex;
-    padding: 16px 24px;
-    border-bottom: 1px solid #EAECF0;
+    width: 20px;
+    height: 20px;
+    padding: 3px;
+    border: 1px solid #7f56d9;
+    background: #fff;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    appearance: none;
+  }
+
+  input:checked {
+    appearance: none;
+    border: 1px solid #7f56d9;
+    background: #f9f5ff;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' viewBox='0 0 14 14' fill='none'%3e%3cpath d='M11.6667 3.5L5.25001 9.91667L2.33334 7' stroke='%237F56D9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .title {
+    color: #101828;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
+  }
+
+  .url {
+    color: #667085;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .description {
+    width: auto;
+    color: #667085;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .date_start {
+    width: 130px;
+    color: #667085;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
+
+  .date_finish {
+    width: 130px;
+    color: #667085;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+  }
 }

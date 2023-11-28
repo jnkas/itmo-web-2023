@@ -1,8 +1,7 @@
 import './style.css'
 import {createWorkspace} from './src/components/workspace/workspace'
 
-
-// Локальное Хранилище (БД); Можно записывать и получать данные
+// Буфер Данных - Задач, в который можно добавлять и получать данные на время Сессии //
 window.Store = {
 
   // tasks: [],  
@@ -12,30 +11,43 @@ window.Store = {
       {
         
         id: '1',
-        title: 'Поправить иконку сайте',
+        title: 'Добавить Контент',
         url: 'catalogapp.io',
-        status: 'new',
-        description: 'Поправить иконку сайте вправо на 20px',
-        date_start: '22.01.2022',
-        date_finish: '25.06.2022'
+        status: ' new',
+        description: 'Добавить новый Видео-Материал на Сайт',
+        date_start: '27.11.2023',
+        date_finish: '31.11.2023'
 
-    } ,
+    },
 
     {
         
       id: '2',
-      title: 'Поправить иконку сайте 2',
+      title: 'Удалить Контент',
       url: 'catalogapp.io',
       status: 'new',
-      description: 'Поправить иконку сайте вправо на 10px',
-      date_start: '30.01.2022',
-      date_finish: '31.01.2022'
+      description: 'Удалить неактульные статьи с Сайта',
+      date_start: '27.11.2023',
+      date_finish: '31.11.2023'
+    
+    },
 
-  }
+    {
+
+      id: '3',
+      title: 'Логотип',
+      url: 'catalogapp.io',
+      status: 'new',
+      description: 'Обновить Логотип Сайта',
+      date_start: '27.11.2023',
+      date_finish: '31.11.2023'
+    }
 
   ]
 
 }
+
+
 
 const createApp = (container) => { // передача параметра с именем container, куда при вызове попадет Элемент DOM - app
 

@@ -22,3 +22,12 @@ export const createTasklist = () => {
     return elem
 
 }
+
+// будем 2 таблицы - суть функции - удалить старый tasklist и добавить новый tasklist
+export const updateTasklist = () => {
+
+    document.querySelector('.task-container').innerHTML = '' // удаляется то, что находится внутри tasklist
+
+    document.querySelector('.task-container').append(createTasklist()) // добавление tasklist в функцию createTasklist, где создается новый список задач
+}
+
