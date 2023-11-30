@@ -4,6 +4,7 @@ import './addtaskform.scss'
 import {saveDataLS} from '../../controllers/localStorage'
 import AirDatepicker from 'air-datepicker'
 import 'air-datepicker/air-datepicker.css'
+import {closeModal} from '../modal/modal'
 
 const validateForm = (dataObject, formElement)=> {
 
@@ -14,14 +15,16 @@ const validateForm = (dataObject, formElement)=> {
 
     //todo переделать параллельно, вместо последовательной проверки
 
-    let isValid = true
-    if (dataObject.title === '') isValid = false
-    formElement.querySelector('.title').classList.toggle('error', !isValid )
+    // let isValid = true
+    let isValidTitle = true
+    let isValidDate = true
+    if (dataObject.title === '') isValidTitle = false
+    formElement.querySelector('.title').classList.toggle('error', !isValidTitle )
 
-    if (dataObject.date_finish === '') isValid = false
-    formElement.querySelector('.date-finish').classList.toggle('error', !isValid )
+    if (dataObject.date_finish === '') isValidDate = false
+    formElement.querySelector('.date-finish').classList.toggle('error', !isValidDate )
 
-    return isValid
+    return isValidTitle && isValidDate
 
 }
 
@@ -93,9 +96,7 @@ export const createAddTaskForm = (data) => {
     const CancelButton = createButton(null, 'Отменить', 'basic')
 
     CancelButton.addEventListener('click', ()=> {
-        console.log(
-            'модальное окно закрыто'
-        )
+        closeModal()
     })
 
     const SaveButton = createButton(null, 'Добавить', 'primary')
@@ -135,13 +136,15 @@ export const createAddTaskForm = (data) => {
 
         updateTasklist()
 
-        let modal = elem.parentElement.parentElement
-        modal.parentElement.classList.remove('fade')
-        modal.style.display = 'none'
+        // let modal = elem.parentElement.parentElement
+        // modal.parentElement.classList.remove('fade')
+        // modal.style.display = 'none'
 
         console.log(
             'модальное окно закрыто'
         )
+
+        closeModal()
     })
 
     elem.querySelector('.form-controls').append(
