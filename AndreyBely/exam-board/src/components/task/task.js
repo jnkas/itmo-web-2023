@@ -1,21 +1,27 @@
-import {updateTasklist} from '../tasklist/tasklist'
-import './task.scss'
+import './task.scss';
+import { updateTasklist } from '../tasklist/tasklist'
+import { saveDataLS } from '../../controllers/localStorage'
 
-const removeTask = (id) => { // передача на вход параметра id в виде конкретного task
-    Store.tasks.forEach((element, i) => { // i - итерация - индекс элемента
-        if (element.id === id) { // проверка, где условие сработает тогда, когда тот id, который надо удалить - совпадет с id перебераемого в итерации элемента
-            Store.tasks.splice(i, 1) // передача начального индекса элемента; удаление одного элемента
-        } 
+// функция удаления Задачи
+const removeTask = (id) => {
+    // передача на вход параметра id в виде конкретного task
+    Store.tasks.forEach((element, i) => {
+        // i - итерация - индекс элемента
+        if (element.id === id) {
+            // проверка, где условие сработает тогда, когда тот id, который надо удалить - совпадет с id перебераемого в итерации элемента
+            Store.tasks.splice(i, 1); // то передается индекса элемента и удаляется один элемент
+            saveDataLS(); // если были удаления (обновления), то сохранить данные и запомнить состояние в Локальном Хранилище - localStore; можно заменить на Функцию отправки данных в БД на Cервер (Backend)
+        }
     });
 
     // for (let i=0; i<Array.length; ++i)
     // Array[i]
-}
+};
 
 export const createTask = (data) => {
-  const elem = document.createElement('div')
-  elem.className = 'task'
-  elem.innerHTML = `
+    const elem = document.createElement('div');
+    elem.className = 'task';
+    elem.innerHTML = `
     <div class='cell name' data-index='${data.id}'>
         <input type='checkbox'/>  
         <div class='text'>
@@ -32,15 +38,14 @@ export const createTask = (data) => {
             <img src='./trash_icon.svg'>
         </div>
     </div>
-  `
+  `;
 
-  elem.querySelector('.controls .remove').addEventListener('click', () => {
-    removeTask(data.id) // запуск функции удаления, при клике
-    updateTasklist() // запуск функции обновления, при клике
-  })
- 
-  return elem
+    elem.querySelector('.controls .remove').addEventListener('click', () => {
+        removeTask(data.id); // запуск функции удаления, при клике
+        updateTasklist(); // запуск функции обновления, при клике
+    });
 
-}
+    return elem;
+};
 
 // data-index='${data.id}'> для отслеживания попадания в ячейку с frontend

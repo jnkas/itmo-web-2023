@@ -3,6 +3,7 @@ import {createButton} from '../button/button'
 import {createTasklist} from '../tasklist/tasklist'
 import {createModal} from '../modal/modal'
 import {createAddTaskForm} from '../addtaskform/addtaskform'
+import gsap from 'gsap'
 
 // Функция Конструктор, которая создает и возвращает каждый раз при вызове новый Элемент 
 export const createWorkspace = () => { 
@@ -30,8 +31,20 @@ export const createWorkspace = () => {
             
             const AddTaskForm = createAddTaskForm() // создание (запись) частного компонента AddTaskForm
 
-            modalContainer.append(createModal(AddTaskForm)) // добавление в modalContainer функцию - создания и вызова Модалки c частным AddTaskForm
+            const modal = createModal(AddTaskForm) // создания и вызова Модалки c частным AddTaskForm
+
+            modalContainer.append(modal) // добавление в modalContainer - создание и вызов Модалки c частным AddTaskForm
+            // modalContainer.append(createModal(AddTaskForm)) // добавление в modalContainer функцию - создания и вызова Модалки c частным AddTaskForm
             document.body.append(modalContainer) // добавление modalContainer в DOM - body
+
+            // Анимация
+            gsap.from(modal, {
+                    opacity: 0,
+                    y: -100,
+                    duration: 20
+            })
+
+
           }) 
  
           elem.querySelector('.actions').append(
