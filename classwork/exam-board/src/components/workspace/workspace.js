@@ -3,7 +3,7 @@ import {createButton} from '../button/button'
 import {createTasklist} from '../tasklist/tasklist'
 import {createModal} from '../modal/modal'
 import { createAddTaskForm } from '../addtaskform/addtaskform'
-
+import { gsap } from 'gsap'
 
 export const createWorkspace = () => {
 
@@ -28,8 +28,16 @@ export const createWorkspace = () => {
 
         const AddTaskForm = createAddTaskForm()
 
-        modalContainer.append(createModal(AddTaskForm))
+        const modal = createModal(AddTaskForm)
+
+        modalContainer.append(modal)
         document.body.append(modalContainer)
+        gsap.from(modal, {
+            opacity: 0,
+            y: -100,
+            duration: 0.3
+        })
+
     })
 
     elem.querySelector('.actions').append(
