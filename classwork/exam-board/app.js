@@ -26,6 +26,15 @@ window.Store = {
   ]
 }
 
+window.getData("click", (e)=> {
+  fetch('http://localhost:3001/get', {
+    mode: 'no-cors',
+    method: 'get',
+    url: `http://localhost:3001`,
+    credentials: 'include'
+  })
+})
+
 window.Store.tasks = loadDataLS()
 
 const createApp = (container) => {
