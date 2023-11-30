@@ -4,9 +4,14 @@
   box-sizing: border-box;
 }
 
+:root {
+  --color-theme-primary: #7f56d9;
+  --color-text-primary: #6941C6;
+}
+
 body {
   margin: 0;
-  background: #6941C6;
+  background: var(--color-text-primary);
   font-family: 'Inter', sans-serif;
 }
 
@@ -21,4 +26,24 @@ body {
   display: flex;
   gap:16px; 
 }
+
+
+/* 
+@keyframes rotateSmth {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button.primary:hover {
+  animation-name: rotateSmth;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+} 
+*/
 

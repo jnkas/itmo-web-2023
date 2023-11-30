@@ -1,8 +1,31 @@
 import { createButton } from '../button/button'
 import { updateTasklist } from '../tasklist/tasklist'
 import './addtaskform.scss'
+import {saveDataLS} from '../../controllers/localStorage'
+import AirDatepicker from 'air-datepicker'
+import 'air-datepicker/air-datepicker.css'
 
-export const createAddTaskForm = () => {
+const validateForm = (dataObject, formElement)=> {
+
+    // if (dataObject.title === '') return false
+    // if (dataObject.date_finish === '') return false
+
+    // return true
+
+    //todo переделать параллельно, вместо последовательной проверки
+
+    let isValid = true
+    if (dataObject.title === '') isValid = false
+    formElement.querySelector('.title').classList.toggle('error', !isValid )
+
+    if (dataObject.date_finish === '') isValid = false
+    formElement.querySelector('.date-finish').classList.toggle('error', !isValid )
+
+    return isValid
+
+}
+
+export const createAddTaskForm = (data) => {
     const elem = document.createElement('div')
     elem.className = 'add-task-form'
     elem.innerHTML = `
@@ -44,6 +67,29 @@ export const createAddTaskForm = () => {
         </form>
         <div class='row form-controls'></div>
     `
+
+    if (data) {
+        elem.querySelector('.title input').value = data.title
+        elem.querySelector('.url input').value = data.url
+        elem.querySelector('.description textarea').value = data.description
+        // elem.querySelector('.state input').value = data.state
+        elem.querySelector('.date-start input').value = data.date_start
+        elem.querySelector('.date-finish input').value = data.date_finish
+    }
+
+    let inputStartDate = elem.querySelector('.date-start input')
+    let inputFinishDate = elem.querySelector('.date-finish input')
+
+    new AirDatepicker(inputStartDate, {
+        position: 'top center',
+        dateFormat: 'dd.MM.yyyy'
+    })
+
+    new AirDatepicker(inputFinishDate, {
+        position: 'top center',
+        dateFormat: 'dd.MM.yyyy'
+    })
+
     const CancelButton = createButton(null, 'Отменить', 'basic')
 
     CancelButton.addEventListener('click', ()=> {
@@ -56,15 +102,32 @@ export const createAddTaskForm = () => {
 
     SaveButton.addEventListener('click', ()=> {
 
-        Store.tasks.push({
-            id: btoa(new Date().toISOString()).slice(-11),
+        let newId = btoa(new Date().toISOString()).slice(-11)
+
+        let formData = {
+            id: (data && data.id) ? data.id : newId,
             title: elem.querySelector('.title input').value,
             url: elem.querySelector('.url input').value,
             status: 'new',
             description: elem.querySelector('.description textarea').value,
             date_start: elem.querySelector('.date-start input').value,
             date_finish: elem.querySelector('.date-finish input').value
-        })
+        }
+
+        if(!validateForm(formData, elem)) return
+
+        if (!data) {
+            Store.tasks.push(formData)
+        } else {
+            Store.tasks.forEach((element, i) => {
+                if (element.id === data.id) {
+                    Store.tasks[i] = formData
+                }
+            })
+        }
+        
+        //после обновления Store мы вызываем функцию запоминания в БД
+        saveDataLS()
 
         console.log(
             'сохраняем данные'
