@@ -43,6 +43,15 @@ body {
     transition: all 0.5s ease;
 }
 
+.button-cancel {
+    border: 1px solid #D0D5DD;
+    background: white;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+    color: #344054;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
 .button-primary.hover {
     background: #6941c6;
     border: 1px solid #6941c6;
@@ -63,11 +72,11 @@ body {
 /* modal */
 
 .modal {
-    width: 480px;
+    width: 400px;
     padding: 24px;
     border-radius: 12px;
     background: #FFF;
-    min-height: 630px;
+    min-height: auto;
     box-shadow: 0px 8px 8px -4px rgba(16, 24, 40, 0.03), 0px 20px 24px -4px rgba(16, 24, 40, 0.08);
     margin: 0 auto;
     margin-top: 50vh;
@@ -90,7 +99,58 @@ body {
     width: 100vw;
 }
 
-/* form */
+/* Modal heading */
+
+.modal-heading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+}
+
+.heading-text {
+    display: flex;
+    flex-direction: column;
+}
+
+.heading-text .main {
+    color: #101828;
+    text-align: center;
+    font-family: Inter;
+    font-size: 18px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+.heading-text .secondary {
+    color: #667085;
+    text-align: center;
+    font-family: Inter;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+/* Form */
+
+.form-row {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+/*
+.form-row > .input:first-child {
+    flex-grow: 1;
+}
+
+.form-row > .input:last-child {
+    width: 112px;
+}
+
 
 .form-row {
     display: flex;
@@ -106,7 +166,13 @@ body {
     width: 112px;
 }
 
+*/
+
 /* input */
+
+.input {
+    width: 100%;
+}
 
 .input label {
     color: #344054;
@@ -143,4 +209,54 @@ body {
     font-weight: 400;
     line-height: 20px;
     margin-top: 6px;
+}
+
+/*.input label {*/
+/*    color: #344054;*/
+/*    font-size: 14px;*/
+/*    font-weight: 500;*/
+/*    line-height: 20px;*/
+/*    margin-bottom: 6px;*/
+/*    display: block;*/
+/*}*/
+
+/*.input input {*/
+/*    border-radius: 8px;*/
+/*    border: 1px solid #D0D5DD;*/
+/*    background: #FFF;*/
+/*    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);*/
+/*    padding: 10px 14px;*/
+/*    color: #101828;*/
+/*    font-size: 16px;*/
+/*    font-weight: 400;*/
+/*    line-height: 24px;*/
+/*    outline: none;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*}*/
+
+/*.input input::placeholder {*/
+/*    color: #101828;*/
+/*}*/
+
+/*.input .hint {*/
+/*    color: #667085;*/
+/*    font-size: 14px;*/
+/*    font-style: normal;*/
+/*    font-weight: 400;*/
+/*    line-height: 20px;*/
+/*    margin-top: 6px;*/
+/*}*/
+
+/*Modal Buttons*/
+
+.modal-buttons {
+    display: flex;
+    gap: 12px;
+    justify-content: center;
+    margin-top: 32px;
+}
+
+.modal-buttons .button {
+    width: 100%;
 }
