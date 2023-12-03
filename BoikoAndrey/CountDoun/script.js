@@ -3,11 +3,20 @@ const containerDay = document.querySelector('.clock-day')
 const containerHour = document.querySelector('.clock-hours')
 const containerMinute = document.querySelector('.clock-minutes')
 const containerSecond = document.querySelector('.clock-seconds')
-// функция приобке
+const $buttonRezet = document.createElement ('button')
+$buttonRezet.append('Сброс интервала')
+document.querySelector('body').append($buttonRezet)
+let isErrorValidate = false
+let timerValidate = false
+// Функция при повторном запуске интервала
+const secondTimer = () => {
+    alert('Сбрось интервал')
+}
+// функция при ошибке
 const isError = () => {
 
     alert ('Не коректная дата!')
-
+    isErrorValidate = true
 }
 // функция при завершении отсчета таймера
 const isStart = () => {
@@ -15,8 +24,13 @@ const isStart = () => {
 }
 // таймер
 const startTimer = () => {
-    // Сброс предыдущего интервала
-    clearInterval()
+    if (timerValidate){
+        secondTimer()
+        return
+    }    
+
+    isErrorValidate = false
+  
     // переменная дата сегодня
     const nowDate =(new Date().getFullYear() + '-' + new Date().getMonth()  + '-' + new Date().getDate()) 
     // переменная дата которую выбрал полльзователь
@@ -28,19 +42,20 @@ const startTimer = () => {
     // получение текущего месяца
     const isEven = (new Date().getMonth())
 
-
-// проверки на актуальность выбранных дат
-    if (+(date.slice(0, 4)) < +(nowDate.slice(0, 4))) isError()
-    if (+(date.slice(0, 4)) === +(nowDate.slice(0, 4)) && +(date.slice(5,7)) < (+(nowDate.slice(5,7)) + 1)) isError()
-    if (+(date.slice(0, 4)) === +(nowDate.slice(0, 4)) && +(date.slice(5,7)) === (+(nowDate.slice(5,7)) + 1) && +(date.slice(8)) < +(nowDate.slice(8))) isError()
-    // Объект для подсчета оставшегося времени
     const timer = {
 
         day: 0,
         hour: 0,
         minute: 0,
         second: 0,
-        }
+        } 
+
+// проверки на актуальность выбранных дат
+    if (+(date.slice(0, 4)) < +(nowDate.slice(0, 4))) isError()
+    if (+(date.slice(0, 4)) === +(nowDate.slice(0, 4)) && +(date.slice(5,7)) < (+(nowDate.slice(5,7)) + 1)) isError()
+    if (+(date.slice(0, 4)) === +(nowDate.slice(0, 4)) && +(date.slice(5,7)) === (+(nowDate.slice(5,7)) + 1) && +(date.slice(8)) < +(nowDate.slice(8))) isError()
+    // Объект для подсчета оставшегося времени
+   
 
     // Переменные в который записывается разница между текущей датой и выбранной
     // let resultYear = +(date.slice(0, 4)) - +(nowDate.slice(0, 4))
@@ -64,7 +79,9 @@ const startTimer = () => {
         containerHour.innerHTML = timer.hour
         containerMinute.innerHTML = timer.minute
         containerSecond.innerHTML = timer.second
-    setInterval(() => {
+    const intervalId = setInterval(() => {
+        timerValidate = true
+        if (isErrorValidate) return
         if (timer.second === 0) {
             timer.second = 59
             containerSecond.innerHTML = timer.second
@@ -105,9 +122,14 @@ const startTimer = () => {
                 containerSecond.innerHTML = timer.second
             }
         }
-    }, 100) 
+    }, 1000) 
 
-   
+    const resetInterval = () => {
+        clearInterval(intervalId)
+        timerValidate = false
+    }
+
+    $buttonRezet.addEventListener('click', resetInterval)
     
     
 
@@ -132,5 +154,8 @@ const startTimer = () => {
 
 const $input = document.querySelector('.clock-input input')
 
-$input.addEventListener('change', startTimer)
+$input.addEventListener('change', () => {
+    
+    startTimer()
+})
 
