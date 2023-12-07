@@ -1,0 +1,49 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --color-theme-primary: #7f56d9;
+  --color-text-primary: #6941C6;
+}
+
+body {
+  margin: 0;
+  background: var(--color-text-primary);
+  font-family: 'Inter', sans-serif;
+}
+
+#app {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  grid-template-rows: 1fr;
+  height: 100vh;
+}
+
+.row {
+  display: flex;
+  gap:16px; 
+}
+
+
+/* 
+@keyframes rotateSmth {
+  from {
+    transform: rotate(0);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.button.primary:hover {
+  animation-name: rotateSmth;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+} 
+*/
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .lvl {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            background-color: black;
+            margin-top: 160px;
+        }
+        .green { background-color: green; }
+        .tomato { background-color: tomato; }
+        .blueviolet { background-color: blueviolet; }
+        .orange { background-color: orange; }
+
+    </style>
+</head>
+<body>
+    <div class="lvl black">
+        <div class="lvl green">
+            <div class="lvl tomato">
+                <div class="lvl blueviolet">
+                    <div class="lvl orange"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        const $divCollection = document.querySelectorAll(".lvl")
+
+        const handler = (e) => {
+
+            let cutLvl = (s) => {
+                return s.slice(4)
+            }
+            console.log(
+
+                e, 
+                'currentTarget: ' + cutLvl(e.currentTarget.className),
+                'target: ' + cutLvl(e.target.className) )
+        }
+        $divCollection.forEach(
+            (elem, i) => {
+                elem.addEventListener("mouseover", handler)
+            }
+        )
+    </script>
+    
+</body>
+</html>
